@@ -1,12 +1,15 @@
 {
 	"action": {
-		"default_popup": "popup.html"
+		"default_popup": "public/popup.html"
 	},
 	"background": {
-		"service_worker": "worker.js"
+		"service_worker": "public/worker.js"
 	},
 	"manifest_version": 3,
 	"name": "test extension",
 	"description": "test extension",
-	"version": "0.1.0"
+	"version": "0.1.0",
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src self;"
+	}
 }
